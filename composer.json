@@ -1,0 +1,28 @@
+{
+    "name": "biduletruck/jean-forteroche",
+    "description": "OCR - Projet 03 - Blog d'un écrivain",
+    "require": {
+        "twbs/bootstrap": "^3.3.7",
+        "tinymce/tinymce": "^4.5",
+        "components/jquery": "^3.1.1"
+    },
+    "authors": [
+        {
+            "name": "biduletruck",
+            "email": "clementyann@free.fr"
+        }
+
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Web\\":"Web/"
+        }
+    },
+    "scripts": {
+
+        "post-install-cmd": [
+            "php BDD/install.php"
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+body
+{
+    padding-top: 70px;
+}
+
+#addComment
+{
+    Display: none;
+}
+
+.addResponseComment
+{
+    Display: none;
+}
+
+#adminNewPost
+{
+    Display: none;
+}
