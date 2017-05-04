@@ -10,11 +10,11 @@
     2. Puis faire "Create database forteroche;"
     3. Sortir de MySql
 4. Ouvrir la console et se placer dans le dossier jean-forteroche
-5. Faire un Coposer install
+5. Faire un Composer install
     1. Téléchargement et instalaltion des dépendances
     2. Configuration du module FileManager (gestion des images)
         1. Il n'existe pas de dépendance composer)
-    3. Inmport automatique du DUMP SQL (Table et sources)
+    3. Import automatique du DUMP SQL (Table et sources)
         1. Donne la possibilité d'un rechargement de la base.
         2. L'import automatique ne fonctionne que sur des environnements unix
 
