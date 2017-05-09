@@ -13,8 +13,8 @@ class ModelComments extends DatabaseRepository implements CommentsGateway
         $sql = "INSERT INTO t_commentaire (COM_DATE, COM_AUTEUR, COM_CONTENU, BIL_ID, PARENT_ID, LEVEL) VALUES (:COM_DATE, :COM_AUTEUR, :COM_CONTENU, :BIL_ID, :PARENT_ID, :LEVEL)";
         $array = [
             "COM_DATE"      => $date->format('Y-m-d H:i:s'),
-            "COM_AUTEUR"    => $author,
-            "COM_CONTENU"   => $content,
+            "COM_AUTEUR"    => htmlspecialchars($author),
+            "COM_CONTENU"   => htmlspecialchars($content),
             "BIL_ID"        => $postId,
             "PARENT_ID"     => $parentId,
             "LEVEL"         => $level

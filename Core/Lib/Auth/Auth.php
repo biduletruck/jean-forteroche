@@ -35,10 +35,10 @@ class Auth implements AuthInterface
 
     public function login($username, $pass)
     {
-        $verifUser = $this->connexion->getQuery("SELECT * FROM t_users WHERE t_users.username LIKE '" . $username . "'");
+        $verifUser = $this->connexion->getQuery("SELECT * FROM t_users WHERE t_users.username LIKE '" . htmlspecialchars($username) . "'");
         $user = $verifUser->fetch(\PDO::FETCH_OBJ);
 
-        if ( ($username === $user->username) && ( password_verify($pass, $user->userpassword)) )
+        if ( ($username === $user->username) && ( password_verify(htmlspecialchars($pass), $user->userpassword)) )
             {
             foreach ($user as $key => $value)
             {
@@ -48,7 +48,7 @@ class Auth implements AuthInterface
         }
         else
         {
-            $this->session->setMessage('danger', $this->options['loginNok']);
+           // $this->session->setMessage('danger', $this->options['loginNok']);
             App::redirect('connexion');
         }
     }
