@@ -7,9 +7,3 @@
 # Composer PHAR
 composer.phar
 
-#Dossier images
-Core/Assets/source/
-
-#Dossier thumbs
-Core/Assets/thumbs/
-
