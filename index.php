@@ -15,6 +15,7 @@ require (ROOT . '/Core/App/boostrap.php');
 $config = [];
 $config['loadedRoutes'] = [
 
+    ["url" => "#404#", "src" => "Error", "controller" => "Error", "action" => "error"],
     //ModelComments Back Office
     ["url" => "#post/commentresponse/(\\d+)#", "src" => "Blog", "controller" => "Comments", "action" => "addCommentResponse"],
     ["url" => "#post/deletecommentsalert/(\\d+)#", "src" => "Blog", "controller" => "Comments", "action" => "deleteCommentsFromAlert"],

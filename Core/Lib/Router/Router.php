@@ -3,6 +3,8 @@
 namespace Core\Lib\Router;
 
 
+use Core\Lib\App;
+
 class Router
 {
     public $request;
@@ -24,7 +26,6 @@ class Router
 
     /**
      * @return Route
-     * @throws \RouteNotFoundException
      */
     public function findRoute($url)
     {
@@ -33,7 +34,7 @@ class Router
                 return $route;
             }
         }
-        throw new RouteNotFoundException();
+        App::redirect('404');
     }
 
 }

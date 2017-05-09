@@ -15,6 +15,7 @@
     <script Content-Type="application/javascript">
         tinymce.init({
             selector: '.tinymce',
+            extended_valid_elements : 'img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]',
             height: 400,
             plugins: [
                 "advlist autolink lists link image charmap print preview anchor",
