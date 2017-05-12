@@ -25,7 +25,6 @@ class NotFoundException extends \Exception
     {
         header("Status : 404 Not Found");
         header('HTTP/1.0 404 Not Found');
-        $err = New ControllerError();
-        $err->error();
+        App::redirect('404');
     }
 }
