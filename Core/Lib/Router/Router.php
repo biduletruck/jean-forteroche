@@ -34,7 +34,7 @@ class Router
                 return $route;
             }
         }
-        App::redirect('404');
+
     }
 
 }

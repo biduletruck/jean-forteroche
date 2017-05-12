@@ -8,6 +8,7 @@ use Core\Lib\Auth\Auth;
 use Core\Lib\Auth\Session;
 use Core\Lib\Router\RequestFactory;
 use Core\Lib\Router\Router;
+use Core\Lib\Router\RouteException\NotFoundException;
 
 class App {
 
@@ -44,11 +45,26 @@ class App {
 
     public function run()
     {
-        $request = $this->requestFactory->buildRequest(array_key_exists('url',$_GET) ? $_GET['url'] : '');
-        $route = $this->router->findRoute($request->getUrl());
-        $controller = $route->getController();
-        $action = $route->getAction();
-        $controller->$action();
+
+            $request = $this->requestFactory->buildRequest(array_key_exists('url',$_GET) ? $_GET['url'] : '');
+            $route = $this->router->findRoute($request->getUrl());
+            try
+            {
+                if( $route == NULL )
+                {
+                    throw new NotFoundException('Page non touvée !');
+                }
+
+                $controller = $route->getController();
+                $action = $route->getAction();
+                $controller->$action();
+            }
+            catch(NotFoundException $e)
+            {
+                $e->getError404();
+
+            }
+
     }
 
     public static function redirect($url)
