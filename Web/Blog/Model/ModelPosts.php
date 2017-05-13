@@ -81,6 +81,10 @@ class ModelPosts extends DatabaseRepository implements PostsGateway
         {
             $exception->getError404();
         }
+        catch (\Exception $e)
+        {
+            $e->getMessage();
+        }
 
     }
 

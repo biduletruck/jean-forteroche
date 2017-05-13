@@ -64,6 +64,11 @@ class App {
                 $e->getError404();
 
             }
+            catch (\Exception $e)
+            {
+                $error = new NotFoundException();
+                $error->getError500();
+            }
 
     }
 

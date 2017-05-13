@@ -11,7 +11,6 @@ namespace Core\Lib\Router\RouteException;
 
 use Core\Lib\App;
 use Throwable;
-use Web\Error\Controller\ControllerError;
 
 class NotFoundException extends \Exception
 {
@@ -23,8 +22,17 @@ class NotFoundException extends \Exception
 
     public function getError404()
     {
-        header("Status : 404 Not Found");
+       // header("Status : 404 Not Found");
         header('HTTP/1.0 404 Not Found');
-        App::redirect('404');
+        readfile('404.html');
+        exit();
+
+    }
+
+    public function getError500()
+    {
+        header('HTTP/1.0 500 Not Found');
+        readfile('500.html');
+        exit();
     }
 }
