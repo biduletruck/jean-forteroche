@@ -35,10 +35,10 @@ class Auth implements AuthInterface
 
     public function login($username, $pass)
     {
-        $verifUser = $this->connexion->getQuery("SELECT * FROM t_users WHERE t_users.username LIKE '" . htmlspecialchars($username) . "'");
+        $verifUser = $this->connexion->getQuery("SELECT * FROM t_users WHERE t_users.username LIKE '" . htmlspecialchars($username,ENT_QUOTES) . "'");
         $user = $verifUser->fetch(\PDO::FETCH_OBJ);
 
-        if ( ($username === $user->username) && ( password_verify(htmlspecialchars($pass), $user->userpassword)) )
+        if ($user && ($username === $user->username) && ( password_verify(htmlspecialchars($pass), $user->userpassword)) )
             {
             foreach ($user as $key => $value)
             {

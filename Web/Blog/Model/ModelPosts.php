@@ -68,23 +68,12 @@ class ModelPosts extends DatabaseRepository implements PostsGateway
     public function findPost($id)
     {
         $post = $this->db->getQuery('SELECT * FROM t_billet WHERE bil_id = ' . $id)->fetch(\PDO::FETCH_OBJ);
-
-        try
-        {
             if ($post === false)
             {
                 throw new NotFoundException('Page non touvée !');
             }
             return $post;
-        }
-        catch (NotFoundException $exception)
-        {
-            $exception->getError404();
-        }
-        catch (\Exception $e)
-        {
-            $e->getMessage();
-        }
+
 
     }
 
