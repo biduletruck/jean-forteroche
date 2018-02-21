@@ -18,7 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- <script src='/jean-forteroche/vendor/tinymce/tinymce/tinymce.min.js'></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.7/jquery.tinymce.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.7/tinymce.min.js"></script>
     <script Content-Type="application/javascript">
         tinymce.init({
             selector: '.tinymce',
