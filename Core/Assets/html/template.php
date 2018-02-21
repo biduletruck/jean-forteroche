@@ -8,8 +8,14 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="/jean-forteroche/vendor/components/jquery/jquery.min.js" ></script>
-    <script src="/jean-forteroche/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <!-- <script src="/jean-forteroche/vendor/components/jquery/jquery.min.js" ></script>
+    <script src="/jean-forteroche/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script src='/jean-forteroche/vendor/tinymce/tinymce/tinymce.min.js'></script>
     <script Content-Type="application/javascript">
