@@ -21,6 +21,10 @@ $config['loadedRoutes'] = [
     //company
     ["url" => "#admin/company#", "src" => "Admin", "controller" => "Company", "action" => "viewCompany"],
 
+    //achat
+    ["url" => "#achat/update#", "src" => "Achat", "controller" => "Achat", "action" => "updatePhone"],
+    ["url" => "#achat#", "src" => "Achat", "controller" => "Achat", "action" => "addNewPhone"],
+
 
 
     //ModelComments Back Office
