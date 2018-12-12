@@ -73,7 +73,7 @@ $config = array(
 	| with start and final /
 	|
 	*/
-	'upload_dir' => '/jean-forteroche/Core/Assets/source/',
+	'upload_dir' => '/myphone/Core/Assets/source/',
 
 	/*
 	|--------------------------------------------------------------------------

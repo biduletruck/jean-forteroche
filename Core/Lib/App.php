@@ -74,7 +74,7 @@ class App {
 
     public static function redirect($url)
     {
-        header("Location: /jean-forteroche/" . $url);
+        header("Location: " . BASE . $url);
         exit();
     }
 
@@ -94,6 +94,11 @@ class App {
         $lastWord=strrpos($comment," ");
         $comment=substr($comment,0,$lastWord);
         return $comment;
+    }
+
+    public static function write($value)
+    {
+        return !isset($value) ? "" :  $value;
     }
 
 }

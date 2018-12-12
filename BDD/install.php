@@ -9,9 +9,10 @@
 $sqlFile = './BDD/forteroche.sql';
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = 'root';
+$dbpass = '';
 $dbname = 'forteroche';
-exec("mysql --user=$dbuser --password='$dbpass' --host=$dbhost $dbname < ".$sqlFile);
+//exec("mysql --user=$dbuser --password='$dbpass' --host=$dbhost $dbname < ".$sqlFile);
+exec("mysql --user=$dbuser  --host=$dbhost $dbname < ".$sqlFile);
 
 
 /**

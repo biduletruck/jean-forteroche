@@ -13,7 +13,7 @@
                 <?= \Core\Lib\App::textSizeLimit($post->BIL_CONTENU, 300) ?>
             </div>
             <div class="pull-right">
-                <a href="<?= "/myphone/post/" . $post->BIL_ID; ?>" class="btn btn-primary btn-xs">Lire la suite ...</a>
+                <a href="<?= BASE . "post/" . $post->BIL_ID; ?>" class="btn btn-primary btn-xs">Lire la suite ...</a>
             </div>
         </div>
 

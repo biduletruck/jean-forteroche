@@ -16,6 +16,13 @@ $config = [];
 $config['loadedRoutes'] = [
 
     ["url" => "#404#", "src" => "Error", "controller" => "Error", "action" => "error"],
+
+
+    //company
+    ["url" => "#admin/company#", "src" => "Admin", "controller" => "Company", "action" => "viewCompany"],
+
+
+
     //ModelComments Back Office
     ["url" => "#post/commentresponse/(\\d+)#", "src" => "Blog", "controller" => "Comments", "action" => "addCommentResponse"],
     ["url" => "#post/deletecommentsalert/(\\d+)#", "src" => "Blog", "controller" => "Comments", "action" => "deleteCommentsFromAlert"],
@@ -57,6 +64,12 @@ $config['loadedRoutes'] = [
     ["url" => "#post/post/(\\d+)#", "src" => "Blog", "controller" => "Comments", "action" => "addComment"],
     ["url" => "#post/(\\d+)#", "src" => "Blog", "controller" => "Posts", "action" => "getPost"],
     ["url" => "#posts#", "src" => "Blog", "controller" => "Posts", "action" => "findAllPosts"],
+
+    //Front office
+    ["url" => "#phone/phone/(\\d+)#", "src" => "Phone", "controller" => "Phone", "action" => "addNewPhone"],
+    ["url" => "#phone#", "src" => "Phone", "controller" => "Phone", "action" => "findAllPhones"],
+
+    //Accueil
     ["url" => "#^$#", "src" => "Accueil", "controller" => "Accueil", "action" => "accueil"],
     ["url" => "#accueil#", "src" => "Accueil", "controller" => "Accueil", "action" => "accueil"]
 
