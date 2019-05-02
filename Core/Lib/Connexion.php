@@ -13,8 +13,8 @@ class Connexion
   
     const HOST = 'localhost';
     const DBNAME = 'forteroche';
-    const USER = 'root';
-    const PASS = ''; //Sous les systems unix le password est root ... et vide sous windows.
+    const USER = 'admin';
+    const PASS = 'lilia2605'; //Sous les systems unix le password est root ... et vide sous windows.
 
     /*
      * Instance de PDO
